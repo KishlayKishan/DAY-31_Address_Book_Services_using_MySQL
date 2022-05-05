@@ -134,3 +134,21 @@ Rows matched: 0  Changed: 0  Warnings: 0
 +-----------+----------+------------+---------+---------------+---------+-------------+------------------+
 4 rows in set (0.0011 sec)
  MySQL  localhost:3306 ssl  addressbookservice  SQL >
+
+
+
+===========================================================
+-- UC5 -deleting the contact by their lastname
+===========================================================
+ MySQL  localhost:3306 ssl  addressbookservice  SQL >  delete from addressBook where lastname='Shakya';
+Query OK, 1 row affected (0.0115 sec)
+ MySQL  localhost:3306 ssl  addressbookservice  SQL > select * from AddressBook;
++-----------+----------+------------+---------+---------------+---------+-------------+------------------+
+| firstName | lastName | address    | city    | state         | zip     | phoneNumber | email            |
++-----------+----------+------------+---------+---------------+---------+-------------+------------------+
+| Ashish    | Sahu     | Bolangir   | BBSR    | Odisha        |  768041 |  7339731548 | ashish@gmail.com |
+| Deepak    | Yadav    | Alambagh   | Lucknow | Uttar Pradesh |  520102 |   888888888 | deepak@gmail.com |
+| Ajeeth    | Yadav    | sirinagara | chennai | Tamilnadu     | 3021402 |   777777777 | ajith@gmail.com  |
++-----------+----------+------------+---------+---------------+---------+-------------+------------------+
+3 rows in set (0.0016 sec)
+ MySQL  localhost:3306 ssl  addressbookservice  SQL >
