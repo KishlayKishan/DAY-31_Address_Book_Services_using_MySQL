@@ -220,6 +220,22 @@ Query OK, 1 row affected (0.0035 sec)
 | uday      | reddy    | gauribidanur | benagaluru    | karnataka     |  652142 |  8520147963 | Uday@gmail.com   |
 +-----------+----------+--------------+---------------+---------------+---------+-------------+------------------+
 6 rows in set (0.0011 sec)
+
+
+
+========================================================
+-- UC10 ability to get count of contacts by contacttype
+========================================================
+
+ MySQL  localhost:3306 ssl  addressbookservice  SQL > select count(firstname) from AddressBook where contactType='family';
++------------------+
+| count(firstname) |
++------------------+
+|                1 |
++------------------+
+1 row in set (0.0011 sec)
+ MySQL  localhost:3306 ssl  addressbookservice  SQL >
+
  MySQL  localhost:3306 ssl  addressbookservice  SQL > select firstname,city from AddressBook order by city;
 +-----------+---------------+
 | firstname | city          |
