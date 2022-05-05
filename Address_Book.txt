@@ -152,3 +152,17 @@ Query OK, 1 row affected (0.0115 sec)
 +-----------+----------+------------+---------+---------------+---------+-------------+------------------+
 3 rows in set (0.0016 sec)
  MySQL  localhost:3306 ssl  addressbookservice  SQL >
+
+
+
+===========================================================
+--> UC6 retrieving the contact by city or state
+===========================================================
+
+mysql> select * from AddressBook where city = 'Lucknow' or State='Uttar Pradesh';
++-----------+----------+----------+---------+---------------+--------+-------------+-----------------------+
+| firstName | lastName | address  | city    | state         | zip    | phoneNumber | email                 |
++-----------+----------+----------+---------+---------------+--------+-------------+-----------------------+
+| Deepak    | Yadav    | Alambagh | Lucknow | Uttar Pradesh | 520102 |   888888888 | deepak@gmail.com      |
++-----------+----------+----------+---------+---------------+--------+-------------+-----------------------+
+2 rows in set (0.00 sec)
