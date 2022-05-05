@@ -108,3 +108,29 @@ Records: 4  Duplicates: 0  Warnings: 0
 +-----------+----------+------------+---------+---------------+---------+-------------+------------------+
 4 rows in set (0.0010 sec)
  MySQL  localhost:3306 ssl  addressbookservice  SQL >
+
+
+
+===========================================================
+--> UC4 editing the existing contact by their firstname
+===========================================================
+
+ MySQL  localhost:3306 ssl  addressbookservice  SQL > update AddressBook set  lastName='Yadav' where firstname='Ajeeth';
+Query OK, 1 row affected (0.0040 sec)
+
+Rows matched: 1  Changed: 1  Warnings: 0
+ MySQL  localhost:3306 ssl  addressbookservice  SQL > update addressbook set phoneNumber=9876543210 where firstname='Shivam';
+Query OK, 0 rows affected (0.0467 sec)
+
+Rows matched: 0  Changed: 0  Warnings: 0
+ MySQL  localhost:3306 ssl  addressbookservice  SQL > select * from AddressBook;
++-----------+----------+------------+---------+---------------+---------+-------------+------------------+
+| firstName | lastName | address    | city    | state         | zip     | phoneNumber | email            |
++-----------+----------+------------+---------+---------------+---------+-------------+------------------+
+| Ashish    | Sahu     | Bolangir   | BBSR    | Odisha        |  768041 |  7339731548 | ashish@gmail.com |
+| Shivam    | Shakya   | Ramapura   | Ethawa  | Bihar         |  561210 |   999999999 | shivam@gmail.com |
+| Deepak    | Yadav    | Alambagh   | Lucknow | Uttar Pradesh |  520102 |   888888888 | deepak@gmail.com |
+| Ajeeth    | Yadav    | sirinagara | chennai | Tamilnadu     | 3021402 |   777777777 | ajith@gmail.com  |
++-----------+----------+------------+---------+---------------+---------+-------------+------------------+
+4 rows in set (0.0011 sec)
+ MySQL  localhost:3306 ssl  addressbookservice  SQL >
